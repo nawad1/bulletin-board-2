@@ -15,6 +15,28 @@
       <a href="/">Bulletin Board</a>
     </nav>
 
+  <% if current_user != nil %>
+    <nav>
+      <a href="/users/sign_out">Sign out</a>
+    </nav>
+
+    <nav>
+      <a href="/users/edit">Edit</a>
+    </nav>
+
+  <% else %>
+      <nav>
+      <a href="/users/sign_up">Sign up</a>
+    </nav>
+
+        <nav>
+      <a href="/users/sign_in">Sign in</a>
+    </nav>
+  <% end %>
+
+
+
+
     <hr>
 
     <% if notice.present? %>
